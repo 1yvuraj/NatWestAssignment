@@ -13,7 +13,7 @@ Steps:
 
 6. Search Endpoint: Create an endpoint to search for students by roll number. Use Spring Data JPA to interact with the in-memory database/cache.
 
-7. Unit Testing: Write unit tests for your service methods and controllers using frameworks like JUnit and Mockito.
+7. Unit Testing
 
 8. Documentation
 

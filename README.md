@@ -19,59 +19,7 @@ Steps:
 
 9. README**: Provide clear instructions in your README for setting up and running the application, using the API endpoints, and any other relevant information.
 
-### Sample Code:
 
-
-// Student.java (Entity)
-@Entity
-public class Student {
-    @Id
-    private String rollNumber;
-    private String name;
-    private int science;
-    private int maths;
-    private int english;
-    private int computer;
-    private String eligibilityStatus;
-    // getters and setters
-}
-
-// StudentService.java
-@Service
-public class StudentService {
-    @Autowired
-    private StudentRepository studentRepository;
-    public void processCsv(MultipartFile file) {
-        // CSV processing logic
-    }
-    public void updateEligibilityCriteria(Criteria criteria) {
-        // Update eligibility criteria logic
-    }
-    public Student findByRollNumber(String rollNumber) {
-        // Find student by roll number logic
-    }
-}
-
-// StudentController.java
-@RestController
-public class StudentController {
-    @Autowired
-    private StudentService studentService;
-    @PostMapping("/upload")
-    public ResponseEntity<?> uploadCsv(@RequestParam("file") MultipartFile file) {
-        // Handle CSV upload
-    }
-    @PutMapping("/criteria")
-    public ResponseEntity<?> updateCriteria(@RequestBody Criteria criteria) {
-        // Update eligibility criteria
-    }
-    @GetMapping("/student/{rollNumber}")
-    public ResponseEntity<?> getStudent(@PathVariable String rollNumber) {
-        // Get student by roll number
-    }
-}
-```
-
-### Conclusion:
+ Conclusion:
 
 With Spring Boot, you can easily build a robust microservice-based API for student scholarship eligibility. Follow the steps outlined above, and don't forget to write unit tests, provide thorough documentation, and ensure proper logging for a complete and reliable solution.

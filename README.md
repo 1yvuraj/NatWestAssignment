@@ -15,7 +15,7 @@ Steps:
 
 7. Unit Testing: Write unit tests for your service methods and controllers using frameworks like JUnit and Mockito.
 
-8. Swagger Documentation: Integrate Swagger UI with Spring Boot using libraries like Springfox or Springdoc OpenAPI. Annotate your controllers with Swagger annotations to generate API documentation.
+8. Documentation
 
  Conclusion:
 

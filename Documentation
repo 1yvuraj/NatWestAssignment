@@ -1,0 +1,50 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Student Scholarship API"
+basePath: "/api"
+schemes:
+  - "http"
+paths:
+  /upload:
+    post:
+      summary: Upload CSV file and process
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: file
+          in: formData
+          type: file
+          required: true
+      responses:
+        200:
+          description: OK
+  /students/{roll_number}:
+    get:
+      summary: Get student eligibility status by roll number
+      parameters:
+        - name: roll_number
+          in: path
+          type: string
+          required: true
+      responses:
+        200:
+          description: OK
+definitions:
+  Student:
+    type: object
+    properties:
+      roll_number:
+        type: string
+      student_name:
+        type: string
+      science:
+        type: integer
+      maths:
+        type: integer
+      english:
+        type: integer
+      computer:
+        type: integer
+      eligibility:
+        type: string
